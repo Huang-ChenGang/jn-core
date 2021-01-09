@@ -4,10 +4,10 @@ plugins {
 }
 
 dependencies {
+    implementation 'jakarta.validation:jakarta.validation-api'
+
     annotationProcessor 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
-    testCompileOnly 'org.projectlombok:lombok'
 }
 
 publishing {

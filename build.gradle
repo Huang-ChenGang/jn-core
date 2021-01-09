@@ -28,6 +28,7 @@ subprojects {
     dependencyManagement {
         dependencies {
             dependency 'org.projectlombok:lombok:1.18.16'
+            dependency 'jakarta.validation:jakarta.validation-api:3.0.0'
         }
     }
 
