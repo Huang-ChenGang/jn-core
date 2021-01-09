@@ -1,4 +1,4 @@
-package com.jn.core.req;
+package com.jn.core.api;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.jn.core.resp;
+package com.jn.core.api;
 
 import com.jn.core.exception.JNError;
 import lombok.AllArgsConstructor;

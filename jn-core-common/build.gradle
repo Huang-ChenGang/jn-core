@@ -4,6 +4,7 @@ plugins {
 }
 
 dependencies {
+    implementation 'org.springframework:spring-context'
     implementation 'jakarta.validation:jakarta.validation-api'
 
     annotationProcessor 'org.projectlombok:lombok'
