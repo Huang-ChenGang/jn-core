@@ -12,7 +12,7 @@ public class KeyBuilder {
      * 格式: 时间+随机数
      * @return 生成后主键
      */
-    public static synchronized String getUniqueKey() {
+    public synchronized String getUniqueKey() {
         Random random = new Random();
         Integer number = random.nextInt(900000) + 100000;
 
@@ -24,7 +24,7 @@ public class KeyBuilder {
      * @param prefix 固定前缀
      * @return 生成后主键
      */
-    public static String getUniqueKey(String prefix) {
+    public String getUniqueKey(String prefix) {
         return prefix + getUniqueKey();
     }
 
@@ -33,7 +33,7 @@ public class KeyBuilder {
      * @param n 位数
      * @return 生成后字符串
      */
-    public static String getRandomLettersOrNumbers(int n) {
+    public String getRandomLettersOrNumbers(int n) {
         StringBuilder val = new StringBuilder();
         Random random = new Random();
         for ( int i = 0; i < n; i++ )
