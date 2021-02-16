@@ -26,4 +26,8 @@ public final class ServerResponse<T> {
         return new ServerResponse<>(error.getResponseCode(), error.getErrorMessage(), null);
     }
 
+    public static <T> ServerResponse<T> error(JNError error, String message) {
+        return new ServerResponse<>(error.getResponseCode(), message, null);
+    }
+
 }
