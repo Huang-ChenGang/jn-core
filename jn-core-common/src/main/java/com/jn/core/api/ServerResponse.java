@@ -3,8 +3,10 @@ package com.jn.core.api;
 import com.jn.core.exception.JNError;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public final class ServerResponse<T> {
 
