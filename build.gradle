@@ -6,7 +6,7 @@ plugins {
 
 allprojects {
     group = 'com.jn'
-    version = '2021.3.2-SNAPSHOT'
+    version = '2021.4.0-SNAPSHOT'
     sourceCompatibility = '11'
 }
 
@@ -15,14 +15,21 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
 
     ext {
-        publishNexusReleases = "http://118.25.184.76:8081/nexus/content/repositories/oobusReleases/"
-        publishNexusSnapshots = "http://118.25.184.76:8081/nexus/content/repositories/oobusSnapshots/"
+        publishNexusReleases = "http://81.68.181.53:8081/repository/jn-releases/"
+        publishNexusSnapshots = "http://81.68.181.53:8081/repository/jn-snapshots/"
         publishNexusUser = NexusUser
         publishNexusPwd = NexusPwd
     }
 
     repositories {
-        mavenCentral()
+        mavenLocal()
+        maven {
+            url "http://81.68.181.53:8081/repository/jn-group/"
+            credentials {
+                username NexusUser
+                password NexusPwd
+            }
+        }
     }
 
     dependencyManagement {
